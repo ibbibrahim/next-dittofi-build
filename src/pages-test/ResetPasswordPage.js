@@ -5,7 +5,7 @@ import { useLocation, useParams, useHistory } from "react-router-dom";
 import { get } from 'lodash';
 import _ from 'lodash';
 import { Area, Bar, CartesianGrid, ComposedChart, Legend, Line, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
-
+import { useRouter } from "next/navigation";
 import { 
 	Chart, PieChart, RichTextEditor, RichText, 
 	ToggleWrapper, Tabs, Slider, Form, MountHandler,
@@ -21,8 +21,12 @@ function Container(props) {
 	} = props;
 
 	const [tasks, setTasks] = useState({});
-	let history = useHistory();
-
+	let history;
+	if(true){
+		history = useRouter();
+	}else{
+		history = useHistory();
+	}
 	var startPoll = (action) => {
 	    console.log(`Starting poll for action ${action.name}`);
 

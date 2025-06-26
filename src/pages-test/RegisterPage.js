@@ -14,7 +14,7 @@ import {
 	getFileUrl, Select, MapBox, Marker, DynamicComponent,
 	Link
 } from "../components/dittofi-components";
-
+import { useRouter } from "next/navigation";
 function Container(props) {
 	let {
 		dispatch,
@@ -24,7 +24,12 @@ function Container(props) {
 	} = props;
 
 	const [tasks, setTasks] = useState({});
-	let history = useHistory();
+	let history;
+	if(true){
+		history = useRouter();
+	}else{
+		history = useHistory();
+	}
 
 	var startPoll = (action) => {
 	    console.log(`Starting poll for action ${action.name}`);
