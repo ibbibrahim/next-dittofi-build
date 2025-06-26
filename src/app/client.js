@@ -1,5 +1,5 @@
 "use client";
-import Page from "pages/HomePage";
+import Page from "pages-test/HomePage";
 const Client = () => {
     return <Page />;
 };

@@ -1,5 +1,5 @@
 "use client";
-import Page from "pages/ForgotPasswordPage";
+import Page from "pages-test/ForgotPasswordPage";
 const Client = () => {
     return <Page />;
 };

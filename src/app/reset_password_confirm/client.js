@@ -1,5 +1,5 @@
 "use client";
-import Page from "pages/ConfirmResetPasswordPage";
+import Page from "pages-test/ConfirmResetPasswordPage";
 const Client = () => {
     return <Page />;
 };
