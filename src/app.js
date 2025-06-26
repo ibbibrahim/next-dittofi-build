@@ -11,11 +11,11 @@ function App({ children, dispatch, ...props }) {
     dispatch({ type: "on_app_started", history });
   }, [dispatch, history]);
 
-  // if(!_app_initialized) {
-  //   return ( 
-  //       <div></div> 
-  //   );
-  // }
+  if(!_app_initialized) {
+    return ( 
+        <div></div> 
+    );
+  }
 
   return <>{children}</>;
 }
